@@ -9,7 +9,7 @@ Page({
     saying: "",
     items: [
       { name: "每日一笑", url: "/pages/joke/joke" },
-      { name: "做个决定" },
+      { name: "做个决定" , url: "/pages/decision/decision"},
       { name: "纪念日" },
     ],
   },

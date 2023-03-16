@@ -1,7 +1,8 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/joke/joke"
+        "pages/joke/joke",
+        "pages/decision/decision"
     ],
     "window": {
         "backgroundTextStyle": "light",

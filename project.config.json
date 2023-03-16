@@ -25,11 +25,11 @@
     "simulatorType": "wechat",
     "simulatorPluginLibVersion": {},
     "condition": {},
-    "srcMiniprogramRoot": "miniprogram/",
     "appid": "wx2612a4a7536f33f8",
     "libVersion": "2.30.1",
     "editorSetting": {
         "tabIndent": "insertSpaces",
         "tabSize": 4
-    }
+    },
+    "srcMiniprogramRoot": "miniprogram/"
 }

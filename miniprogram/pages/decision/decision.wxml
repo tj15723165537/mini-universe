@@ -1,0 +1,25 @@
+<view class="page">
+    <view class="options">
+        <view class="add">
+            <van-icon name="plus" />
+        </view>
+        <view class="content">玩什么游戏</view>
+        <view class="edit">
+            <van-icon name="edit" />
+        </view>
+    </view>
+    <lucky-wheel
+            id="myLucky"
+            width="600rpx"
+            height="600rpx"
+            blocks="{{blocks}}"
+            prizes="{{prizes}}"
+            buttons="{{buttons}}"
+            bindstart="start"
+            bindend="end"
+    />
+    <view class="result" wx:if="{{result}}">
+        {{result || ''}}
+    </view>
+    <view class="reset" bindtap="reset" wx:if="{{result}}">重置</view>
+</view>
