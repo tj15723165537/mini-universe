@@ -18,7 +18,11 @@ Page({
       {radius: '15px', background: '#f4f1e9'},
       {radius: '10px', background: '#fff'},
     ],
-    result:''
+    result: '',
+    allPrizes: [{
+      title:'玩什么游戏',
+      dataList:['真三国无双', '地平线5', '英雄联盟', 'Dota2', '艾尔登法环', '塞尔达传说']
+    }]
   },
   start() {
     // 获取抽奖组件实例
@@ -36,18 +40,19 @@ Page({
   end(event) {
     const {text} = event.detail.fonts[0] || ''
     this.setData({
-      result:text
+      result: text
     })
   },
-  reset(){
+  reset() {
     this.setData({
-      result:''
+      result: ''
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad() {
+
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

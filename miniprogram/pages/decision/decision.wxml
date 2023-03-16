@@ -1,8 +1,5 @@
 <view class="page">
     <view class="options">
-        <view class="add">
-            <van-icon name="plus" />
-        </view>
         <view class="content">玩什么游戏</view>
         <view class="edit">
             <van-icon name="edit" />

@@ -4,25 +4,23 @@
     text-align: center;
 
     .options {
-        margin: 30rpx 0 50rpx;
-        display: flex;
-        justify-content: center;
+        margin: 30rpx 0;
+        position: relative;
+        font-family: "kaiti";
+        display: inline-block;
+        line-height: 60rpx;
+        padding: 0 30rpx;
+        font-size: 28rpx;
+        border-radius: 20rpx;
+        background: #f0f0f0;
+        box-shadow: 5rpx 5rpx 10rpx #bebebe;
 
-        .content {
-            font-family: "kaiti";
-            display: inline-block;
-            line-height: 60rpx;
-            padding: 0 30rpx;
-            font-size: 28rpx;
-            border-radius: 20rpx;
-            background: #f0f0f0;
-            box-shadow: 5rpx 5rpx 10rpx #bebebe
-        }
-        .add,.edit{
-            margin: 0 40rpx;
-            display: flex;
-            align-items: center;
+        .edit {
+            position: absolute;
             color: #d7b9c1;
+            right: -60rpx;
+            top:50%;
+            transform: translateY(-50%);
         }
     }
 
