@@ -1,0 +1,9 @@
+<!--pages/index/index.wxml-->
+<view class="home_page">
+    <view class="items">
+        <navigator  class="item" wx:for="{{items}}" wx:key="url" url="{{item.url}}">{{item.name}}</navigator>
+    </view>
+    <view class="saying">
+        {{saying}}
+    </view>
+</view>

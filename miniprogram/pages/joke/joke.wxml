@@ -1,0 +1,14 @@
+<view class="container">
+    <view class="main">
+        <view class="card">
+            <view class="text">
+                <view>
+                    {{text}}
+                </view>
+                <view class="buttons">
+                    <button bind:tap="getJokeList" class="button-name">换一个看看~</button>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

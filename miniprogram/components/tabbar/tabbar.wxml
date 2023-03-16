@@ -1,0 +1,44 @@
+<!--components/tabbar/tabbar.wxml-->
+<view class="tabbar-box" style="padding-bottom: {{bottomLift}}px;">
+  <view class="b-b"></view>
+  <view class="tabbar-content">
+    <navigator hover-class="none" wx:for="{{tabbar}}" wx:if="{{index<2}}" wx:key="index" open-type="switchTab" url="{{item.link}}" class="tabbar-sub">
+      <image mode="widthFix" hidden="{{currentPage == item.link}}" src="{{item.imgSrc}}" class="tabbar-img"></image>
+      <image mode="widthFix" hidden="{{currentPage != item.link}}" src="{{item.imgSrc_active}}" class="tabbar-img"></image>
+      <view class="tabbar-text" style="color: {{currentPage == item.link?item.active_baseColor:item.baseColor}};">{{item.name}}</view>
+      <view class="circle" wx:if="{{index==2&&newmessage=='true'}}"></view>
+    </navigator>
+    <navigator hover-class="none" class="tabbar-sub">
+      <view class="tabbar-sub_new" bindtap="show_dynamic">
+        <van-icon name="plus" color="#ffffff" />
+      </view>
+    </navigator>
+    <!-- <view hover-class="none" bindtap="show_dynamic" class="tabbar-sub">
+      <image mode="widthFix" src="/static/tabbar/new_3.png" class="tabbar-img"></image>
+      <view class="tabbar-text" style="color: #A2A2A2;">发布</view>
+    </view> -->
+    <navigator hover-class="none" wx:for="{{tabbar}}" wx:if="{{index>=2}}" wx:key="index" open-type="switchTab" url="{{item.link}}" class="tabbar-sub">
+      <image mode="widthFix" hidden="{{currentPage == item.link}}" src="{{item.imgSrc}}" class="tabbar-img"></image>
+      <image mode="widthFix" hidden="{{currentPage != item.link}}" src="{{item.imgSrc_active}}" class="tabbar-img"></image>
+      <view class="tabbar-text" style="color: {{currentPage == item.link?item.active_baseColor:item.baseColor}};">{{item.name}}</view>
+      <view class="circle" wx:if="{{index==2&&newmessage=='true'}}"></view>
+    </navigator>
+  </view>
+</view>
+<van-popup z-index="9999" position="bottom" close-on-click-overlay round show="{{ isDynamic }}" bind:close="onClosepopup">
+  <view class="linePop">
+    <view class="linePop_t">
+      <view class="linePop_t_l" bindtap="handlerSelectImg" data-index="album">
+        <image src="../../static/tabbar/look.png"></image>
+        <view class="linePop_t_l_t">从相册选择</view>
+      </view>
+      <view class="linePop_t_r" bindtap="handlerSelectImg" data-index="camera">
+        <image src="../../static/tabbar/photo.png"></image>
+        <view class="linePop_t_l_t">拍照</view>
+      </view>
+    </view>
+    <view class="linePop_x" bindtap="onClosepopup">
+      <van-icon name="cross" color="24rpx" />
+    </view>
+  </view>
+</van-popup>

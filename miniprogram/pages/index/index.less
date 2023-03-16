@@ -1,0 +1,36 @@
+.home_page {
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 20rpx;
+
+    .items {
+        margin-top: 20rpx;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .item {
+            margin: 20rpx;
+            text-align: center;
+            color: #090909;
+            padding: 10rpx 20rpx;
+            font-size: 30rpx;
+            border-radius: 10rpx;
+            background: #e0e0e0;
+            border: 1px solid #e8e8e8;
+            transition: all .3s;
+            box-shadow: 6rpx 6rpx 12rpx #c5c5c5,
+                -6rpx -6rpx 12rpx #ffffff;
+        }
+
+        .item:hover {
+            box-shadow: 4rpx 4rpx 12rpx #c5c5c5,
+                -4rpx -4rpx 12rpx #ffffff;
+        }
+    }
+
+    .saying {
+        padding: 40rpx;
+        color: #36395A;
+        margin-top: 40rpx;
+    }
+}

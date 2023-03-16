@@ -1,0 +1,131 @@
+/* components/tabbar/tabbar.wxss */
+.tabbar-box {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  background-color: white;
+  width: 100%;
+}
+
+.tabbar-content {
+  display: flex;
+  height: 98rpx;
+  width: 100%;
+}
+
+.tabbar-sub {
+  flex: 1;
+  font-size: 22rpx;
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  align-items: center;
+}
+
+.tabbar-sub_new {
+  width: 92rpx;
+  height: 64rpx;
+  border-radius: 32rpx;
+  background: linear-gradient(148.67deg, #fed100 0%, #fe7f00 100%);
+  color: #ffffff;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 15rpx;
+  text-align: center;
+  font-size: 30rpx;
+  margin-top: -10rpx;
+}
+
+.tabbar-extra {
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tabbar-img {
+  width: 54rpx;
+  height: 54rpx;
+  margin: 0 auto;
+  margin-top: 10rpx;
+  margin-bottom: 4rpx;
+}
+
+.tabbar-text {
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-top: -12rpx
+}
+
+.b-b {
+  width: 100%;
+  height: 2rpx;
+  background-color: #ccc;
+  transform: scaleY(0.5);
+}
+
+.circle {
+  position: absolute;
+  top: 10rpx;
+  right: 46rpx;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.linePop {
+  width: 100%;
+  height: 600rpx;
+  border-radius: 40rpx 40rpx 0 0;
+  background: transparent;
+  position: relative;
+}
+
+.linePop_t {
+  position: relative;
+  top: 140rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.linePop_t_l {
+  width: 160rpx;
+  text-align: center;
+}
+
+.linePop_t_l image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.linePop_t_r image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.linePop_t_l_t {
+  font-family: "PingFang SC Bold";
+  font-weight: bold;
+  font-size: 28rpx;
+  text-align: center;
+  color: #333;
+  margin-top: 12rpx;
+}
+.linePop_x{
+  position: absolute;
+  bottom: 108rpx;
+  left: 50%;
+  transform: translate(-50%,0);
+}
