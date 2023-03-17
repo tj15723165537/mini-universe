@@ -13,11 +13,16 @@ Page({
       {radius: '10px', background: '#fff'},
     ],
     result: '',
-    option:{
-      top:'30%',
-      fontSize:'24rpx',
-      background1:'#f4f1e9',
-      background2:'#d7b9c1'
+    option: {
+      top: '35%',
+      fontSize: '24rpx',
+      background1: '#f4f1e9',
+      background2: '#d7b9c1',
+      background3: '#c4a7ae'
+    },
+    allPrizes: {
+      title: '玩什么游戏',
+      dataList: ["艾尔登法环", "只狼", "英雄联盟", "地平线5", "战地", "极品飞车"]
     }
   },
   start() {
@@ -25,7 +30,7 @@ Page({
     const child = this.selectComponent('#myLucky')
     // 调用play方法开始旋转
     child.lucky.play()
-    const length= this.data.prizes.length
+    const length = this.data.prizes.length
     var randomNum = Math.floor(Math.random() * length) + 1;
     // 用定时器模拟请求接口
     setTimeout(() => {
@@ -45,13 +50,18 @@ Page({
     })
   },
   setPrizes() {
-    const data:any = wx.getStorageSync('allPrizes')
+    let data: any = wx.getStorageSync('allPrizes')
+    if (!data) {
+      data = this.data.allPrizes
+      wx.setStorageSync('allPrizes', data)
+    }
     const prizes: any = []
     let background = ''
     data.dataList.forEach((item, index) => {
-      background = index % 2 === 0 ? this.data.option.background1 : this.data.option.background2
+      const propName = `background${(index % 3) + 1}`
+      background = this.data.option[propName]
       prizes.push({
-        fonts: [{text: item, top: this.data.option.top,fontSize:this.data.option.fontSize }],
+        fonts: [{text: item, top: this.data.option.top, fontSize: this.data.option.fontSize}],
         background
       })
     })

@@ -4,8 +4,7 @@
                 model:value="{{ title }}"
                 center
                 clearable
-                label="名称"
-                       />
+                label="名称"/>
     </van-cell-group>
 </view>
 <view class="options">
@@ -19,12 +18,11 @@
         <van-field
                 value="{{ item }}"
                 center
-                clearable
                 data-index="{{index}}"
                 bind:change="changeOption"
-                label="{{'选项'+(index+1)}}"
-
-        />
+                label="{{'选项'+(index+1)}}">
+            <van-icon name="cross" slot="right-icon" data-index="{{index}}" bindtap="deleteOption"/>
+        </van-field>
     </van-cell-group>
 </view>
 <view class="submit">

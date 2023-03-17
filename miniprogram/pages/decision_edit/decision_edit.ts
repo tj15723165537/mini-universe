@@ -15,7 +15,6 @@ Page({
     })
   },
   save() {
-    console.log(this.data.options)
     wx.setStorageSync('allPrizes', {title: this.data.title, dataList: this.data.options})
     wx.navigateTo({
       url:'/pages/decision/decision'
@@ -25,6 +24,14 @@ Page({
     const {index} = e.target.dataset
     const options: any = this.data.options
     options[index] = e.detail
+    this.setData({
+      options
+    })
+  },
+  deleteOption(e){
+    const {index} = e.target.dataset
+    const options: any = this.data.options
+    options.splice(index,1)
     this.setData({
       options
     })
