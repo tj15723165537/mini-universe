@@ -4,14 +4,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    prizes: [
-      {fonts: [{text: '0', top: '30%'}], background: '#f4f1e9'},
-      {fonts: [{text: '1', top: '30%'}], background: '#d7b9c1'},
-      {fonts: [{text: '2', top: '30%'}], background: '#f4f1e9'},
-      {fonts: [{text: '3', top: '30%'}], background: '#d7b9c1'},
-      {fonts: [{text: '4', top: '30%'}], background: '#f4f1e9'},
-      {fonts: [{text: '5', top: '30%'}], background: '#d7b9c1'},
-    ],
+    title: '',
+    prizes: [],
     buttons: [
       {radius: '30px', background: '#fff'},
       {radius: '20px', background: '#fff', pointer: true},
@@ -19,9 +13,15 @@ Page({
       {radius: '10px', background: '#fff'},
     ],
     result: '',
+    option:{
+      top:'30%',
+      fontSize:'24rpx',
+      background1:'#f4f1e9',
+      background2:'#d7b9c1'
+    },
     allPrizes: [{
-      title:'玩什么游戏',
-      dataList:['真三国无双', '地平线5', '英雄联盟', 'Dota2', '艾尔登法环', '塞尔达传说']
+      title: '玩什么游戏',
+      dataList: ['真三国无双', '地平线5', '英雄联盟', 'Dota2', '艾尔登法环', '塞尔达传说']
     }]
   },
   start() {
@@ -29,12 +29,12 @@ Page({
     const child = this.selectComponent('#myLucky')
     // 调用play方法开始旋转
     child.lucky.play()
+    const length= this.data.prizes.length
+    var randomNum = Math.floor(Math.random() * length) + 1;
     // 用定时器模拟请求接口
     setTimeout(() => {
-      // 3s 后得到中奖索引 (假设抽到第0个奖品)
-      const index = 0
       // 调用stop方法然后缓慢停止
-      child.lucky.stop(index)
+      child.lucky.stop(randomNum)
     }, 3000)
   },
   end(event) {
@@ -48,11 +48,27 @@ Page({
       result: ''
     })
   },
+  setPrizes() {
+    const data = this.data.allPrizes[0]
+    const prizes: any = []
+    let background = ''
+    data.dataList.forEach((item, index) => {
+      background = index % 2 === 0 ? this.data.option.background1 : this.data.option.background2
+      prizes.push({
+        fonts: [{text: item, top: this.data.option.top,fontSize:this.data.option.fontSize }],
+        background
+      })
+    })
+    this.setData({
+      title: data.title,
+      prizes
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad() {
-
+    this.setPrizes()
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

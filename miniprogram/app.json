@@ -2,7 +2,8 @@
     "pages": [
         "pages/index/index",
         "pages/joke/joke",
-        "pages/decision/decision"
+        "pages/decision/decision",
+        "pages/decision_edit/decision_edit"
     ],
     "window": {
         "backgroundTextStyle": "light",

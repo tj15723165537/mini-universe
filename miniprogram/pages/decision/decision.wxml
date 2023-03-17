@@ -1,9 +1,9 @@
 <view class="page">
     <view class="options">
-        <view class="content">玩什么游戏</view>
-        <view class="edit">
+        <view class="content">{{title}}</view>
+        <navigator url="/pages/decision_edit/decision_edit" class="edit">
             <van-icon name="edit" />
-        </view>
+        </navigator>
     </view>
     <lucky-wheel
             id="myLucky"
