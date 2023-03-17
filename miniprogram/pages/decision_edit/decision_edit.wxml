@@ -1,2 +1,33 @@
-<!--pages/decision_edit/decision_edit.wxml-->
-<text>pages/decision_edit/decision_edit.wxml</text>
+<view class="title">
+    <van-cell-group>
+        <van-field
+                model:value="{{ title }}"
+                center
+                clearable
+                label="名称"
+                       />
+    </van-cell-group>
+</view>
+<view class="options">
+    <view>
+        <view>
+            选项
+        </view>
+        <van-button type="info" size="small" bindtap="addOption">添加选项</van-button>
+    </view>
+    <van-cell-group wx:for="{{options}}">
+        <van-field
+                value="{{ item }}"
+                center
+                clearable
+                data-index="{{index}}"
+                bind:change="changeOption"
+                label="{{'选项'+(index+1)}}"
+
+        />
+    </van-cell-group>
+</view>
+<view class="submit">
+    <van-button type="primary" size="normal" bindtap="save">保存</van-button>
+</view>
+

@@ -18,11 +18,7 @@ Page({
       fontSize:'24rpx',
       background1:'#f4f1e9',
       background2:'#d7b9c1'
-    },
-    allPrizes: [{
-      title: '玩什么游戏',
-      dataList: ['真三国无双', '地平线5', '英雄联盟', 'Dota2', '艾尔登法环', '塞尔达传说']
-    }]
+    }
   },
   start() {
     // 获取抽奖组件实例
@@ -49,7 +45,7 @@ Page({
     })
   },
   setPrizes() {
-    const data = this.data.allPrizes[0]
+    const data:any = wx.getStorageSync('allPrizes')
     const prizes: any = []
     let background = ''
     data.dataList.forEach((item, index) => {
