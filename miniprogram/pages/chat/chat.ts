@@ -7,7 +7,7 @@ Page({
      */
     data: {
         question: '',
-        answer:''
+        answer:'If you want to use a custom server, please make sure that it is secure and trusted. Otherwise, your API Key and conversation information may be leaked.'
     },
     onChange(event) {
         this.setData({
