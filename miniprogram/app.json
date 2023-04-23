@@ -3,7 +3,8 @@
         "pages/index/index",
         "pages/joke/joke",
         "pages/decision/decision",
-        "pages/decision_edit/decision_edit"
+        "pages/decision_edit/decision_edit",
+        "pages/chat/chat"
     ],
     "window": {
         "backgroundTextStyle": "light",

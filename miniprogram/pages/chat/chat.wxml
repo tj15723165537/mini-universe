@@ -1,0 +1,22 @@
+<view class="page">
+  <view class="answer">
+    {{answer}}
+  </view>
+  <view class="question">
+    <van-cell-group>
+      <van-field
+              value="{{ question }}"
+              center
+              bind:change="onChange"
+              placeholder="请输入"
+              border="{{ false }}"
+              use-button-slot
+      >
+        <van-button slot="button" size="small" type="primary" bind:tap="send">
+          发送
+        </van-button>
+      </van-field>
+    </van-cell-group>
+  </view>
+</view>
+

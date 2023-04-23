@@ -14,3 +14,12 @@ export const getSaying = () => {
     data: {}
   })
 }
+
+export const chat = (msg:string) => {
+  return request({
+    url: 'https://hub.onmicrosoft.cn/chat',
+    data: {
+      q:msg
+    }
+  })
+}
