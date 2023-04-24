@@ -15,7 +15,7 @@ export const getSaying = () => {
   })
 }
 
-export const chat = (msg:string) => {
+export const chat = (msg) => {
   return request({
     url: 'https://hub.onmicrosoft.cn/chat',
     data: {

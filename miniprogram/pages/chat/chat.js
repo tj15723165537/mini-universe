@@ -1,4 +1,3 @@
-// pages/chat/chat.ts
 import {chat} from "../../api/common/index";
 
 Page({
@@ -21,7 +20,6 @@ Page({
             answer: '拼命加载中...'
         })
         chat(this.data.question).then((res) => {
-            console.log(res.data);
             this.setData({
                 answer: res.data.answer,
                 loading:false

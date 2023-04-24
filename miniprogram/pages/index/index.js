@@ -1,4 +1,3 @@
-// pages/index/index.ts
 import {getSaying} from "../../api/common/index";
 
 Page({

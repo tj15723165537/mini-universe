@@ -9,7 +9,6 @@
     "projectname": "myapp",
     "setting": {
         "useCompilerPlugins": [
-            "typescript",
             "less"
         ],
         "babelSetting": {
