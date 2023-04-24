@@ -19,4 +19,7 @@ Page({
             })
         }
     },
+    onReachBottom() {
+        this.getReplyList()
+    },
 })

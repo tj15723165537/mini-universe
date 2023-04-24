@@ -1,7 +1,7 @@
 <view class="content">
   <view class="main">
     <view class="card">
-      <view class="text" wx:for="{{dataList}}" wx:key="{{index}}">
+      <view class="text" wx:for="{{dataList}}" wx:key="{{index}}"  wx:if="{{item.wangyiyunreping}}">
         {{item.wangyiyunreping}}
       </view>
     </view>
