@@ -7,7 +7,8 @@ Page({
      */
     data: {
         question: '',
-        answer:'If you want to use a custom server, please make sure that it is secure and trusted. Otherwise, your API Key and conversation information may be leaked.'
+        answer: '',
+        loading:false,
     },
     onChange(event) {
         this.setData({
@@ -15,10 +16,15 @@ Page({
         });
     },
     send(){
+        this.setData({
+            loading:true,
+            answer: '拼命加载中...'
+        })
         chat(this.data.question).then((res) => {
             console.log(res.data);
             this.setData({
-                answer: res.data.answer
+                answer: res.data.answer,
+                loading:false
             })
         });
     }

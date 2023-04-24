@@ -3,14 +3,15 @@
     <van-cell-group>
       <van-field
               value="{{ question }}"
-
               bind:change="onChange"
-              placeholder="请输入"
+              placeholder="请输入问题"
               border="{{ false }}"
-              use-button-slot
-      >
-        <van-button slot="button" size="small" type="primary" bind:tap="send">
+              use-button-slot>
+        <van-button slot="button" size="small" type="primary" bind:tap="send" wx:if="{{!loading}}">
           发送
+        </van-button>
+        <van-button slot="button" size="small" type="primary" bind:tap="stop" wx:else>
+          停止
         </van-button>
       </van-field>
     </van-cell-group>

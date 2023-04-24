@@ -15,7 +15,7 @@ Page({
     result: '',
     option: {
       top: '35%',
-      fontSize: '24rpx',
+      fontSize: '28rpx',
       background1: '#f4f1e9',
       background2: '#d7b9c1',
       background3: '#c4a7ae'
