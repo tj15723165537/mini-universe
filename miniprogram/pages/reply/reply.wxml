@@ -1,0 +1,8 @@
+<view class="content">
+  <view class="main">
+    <view class="card">
+      <rich-text nodes="{{item.shenhuifu}}" class="text" wx:for="{{dataList}}" wx:key="{{index}}" wx:if="{{item.shenhuifu}}">
+      </rich-text>
+    </view>
+  </view>
+</view>

@@ -3,8 +3,10 @@
         "pages/index/index",
         "pages/joke/joke",
         "pages/decision/decision",
-        "pages/decision_edit/decision_edit",
-        "pages/chat/chat"
+        "pages/decision-edit/decision-edit",
+        "pages/chat/chat",
+        "pages/reply/reply",
+        "pages/hot-review/hot-review"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -13,5 +15,6 @@
         "navigationBarTextStyle": "black"
     },
     "style": "v2",
-    "sitemapLocation": "sitemap.json"
+    "sitemapLocation": "sitemap.json",
+    "onReachBottomDistance": 50
 }

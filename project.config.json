@@ -18,8 +18,8 @@
         },
         "minified": true,
         "postcss": true,
-        "es6": false,
-        "enhance": false,
+        "es6": true,
+        "enhance": true,
         "condition": false
     },
     "simulatorType": "wechat",

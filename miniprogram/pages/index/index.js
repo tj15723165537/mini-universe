@@ -7,9 +7,11 @@ Page({
   data: {
     saying: "",
     items: [
-      { name: "每日一笑", url: "/pages/joke/joke" },
-      { name: "做个决定" , url: "/pages/decision/decision"},
       { name: "百晓通" , url: "/pages/chat/chat"},
+      { name: "做个决定" , url: "/pages/decision/decision"},
+      { name: "搞笑语录", url: "/pages/joke/joke" },
+      { name: "神回复" , url: "/pages/reply/reply"},
+      { name: "网易云热评" , url: "/pages/hot-review/hot-review"},
     ],
   },
   getSayingList() {

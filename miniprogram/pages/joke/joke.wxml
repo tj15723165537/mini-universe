@@ -1,13 +1,8 @@
-<view class="container">
+<view class="content">
     <view class="main">
         <view class="card">
-            <view class="text">
-                <view>
-                    {{text}}
-                </view>
-                <view class="buttons">
-                    <button bind:tap="getJokeList" class="button-name">换一个看看~</button>
-                </view>
+            <view class="text" wx:for="{{dataList}}" wx:key="{{index}}">
+                    {{item.gaoxiao}}
             </view>
         </view>
     </view>

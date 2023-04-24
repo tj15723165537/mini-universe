@@ -1,7 +1,7 @@
 <view class="page">
     <view class="options">
         <view class="content">{{title}}</view>
-        <navigator url="/pages/decision_edit/decision_edit" class="edit">
+        <navigator url="/pages/decision-edit/decision-edit" class="edit">
             <van-icon name="edit" />
         </navigator>
     </view>

@@ -1,6 +1,5 @@
 {
     "usingComponents": {
-        "tabbar": "/components/tabbar/tabbar"
     },
-    "navigationBarTitleText": "每日一笑"
+    "navigationBarTitleText": "搞笑语录"
 }

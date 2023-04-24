@@ -1,0 +1,9 @@
+<view class="content">
+  <view class="main">
+    <view class="card">
+      <view class="text" wx:for="{{dataList}}" wx:key="{{index}}">
+        {{item.wangyiyunreping}}
+      </view>
+    </view>
+  </view>
+</view>

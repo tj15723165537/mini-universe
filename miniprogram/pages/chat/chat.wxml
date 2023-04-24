@@ -7,11 +7,8 @@
               placeholder="请输入问题"
               border="{{ false }}"
               use-button-slot>
-        <van-button slot="button" size="small" type="primary" bind:tap="send" wx:if="{{!loading}}">
+        <van-button slot="button" size="small" type="primary" bind:tap="send">
           发送
-        </van-button>
-        <van-button slot="button" size="small" type="primary" bind:tap="stop" wx:else>
-          停止
         </van-button>
       </van-field>
     </van-cell-group>
